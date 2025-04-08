@@ -10,13 +10,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.XLinkReplacer"
+        android:name=".XLinkReplacerApplication"
         tools:targetApi="31">
 
         <activity
             android:name=".ShareActivity"
-            android:exported="true"
-            android:theme="@style/Theme.XLinkReplacer">
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
