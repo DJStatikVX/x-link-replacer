@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">X Link Replacer</string>
     <string name="title_share_intent">Sharing modified link</string>
-    <string name="error_invalid_link">Invalid error</string>
+    <string name="error_invalid_link">Invalid link</string>
 </resources>
