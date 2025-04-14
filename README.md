@@ -35,4 +35,4 @@ git clone https://github.com/DJStatikVX/x-link-replacer.git
 
 2. Open the project in Android Studio.
 
-3. Build and run on any device running Android 7.0+.
+3. Build and run on any device running Android 5.0+.
