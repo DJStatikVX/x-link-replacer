@@ -43,6 +43,11 @@ android {
     kapt {
         correctErrorTypes = true
     }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -69,4 +74,10 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // MockK
+    testImplementation(libs.mockK)
+
+    // Robolectric
+    testImplementation(libs.robolectric)
 }
