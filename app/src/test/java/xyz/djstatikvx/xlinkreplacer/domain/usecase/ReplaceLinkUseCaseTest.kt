@@ -7,6 +7,7 @@ import io.mockk.mockk
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
+import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
@@ -20,6 +21,13 @@ class ReplaceLinkUseCaseTest {
     val mockXTargetLink = "https://fixupx.com/Android/status/1897004092901446076"
 
     val mockYouTubeSourceLink = "https://www.youtube.com/watch?v=ni2pGkTPLDo"
+
+    private lateinit var useCase: ReplaceLinkUseCase
+
+    @Before
+    fun setUp() {
+        useCase = ReplaceLinkUseCase()
+    }
 
     private fun mockShareIntent(text: String?, intentType: String = LINK_MIME_TYPE): Intent {
         return mockk<Intent>().apply {
@@ -35,7 +43,6 @@ class ReplaceLinkUseCaseTest {
         val mockIntent = mockShareIntent(mockXSourceLink)
 
         // When
-        val useCase = ReplaceLinkUseCase()
         val resultIntent = useCase.processShareIntent(mockIntent)
 
         // Then
@@ -54,7 +61,6 @@ class ReplaceLinkUseCaseTest {
         val mockIntent = mockShareIntent(null)
 
         // When
-        val useCase = ReplaceLinkUseCase()
         val resultIntent = useCase.processShareIntent(mockIntent)
 
         // Then
@@ -67,7 +73,6 @@ class ReplaceLinkUseCaseTest {
         val mockIntent = mockShareIntent(mockYouTubeSourceLink)
 
         // When
-        val useCase = ReplaceLinkUseCase()
         val resultIntent = useCase.processShareIntent(mockIntent)
 
         // Then
@@ -80,7 +85,6 @@ class ReplaceLinkUseCaseTest {
         val mockIntent = mockShareIntent(mockXSourceLink, intentType = IMAGE_MIME_TYPE)
 
         // When
-        val useCase = ReplaceLinkUseCase()
         val resultIntent = useCase.processShareIntent(mockIntent)
 
         // Then
