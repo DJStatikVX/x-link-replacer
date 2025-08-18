@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "xyz.djstatikvx.xlinkreplacer"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "xyz.djstatikvx.xlinkreplacer"
@@ -36,6 +36,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    kotlin {
+        compilerOptions {
+            jvmTarget = JvmTarget.fromTarget("11")
+        }
     }
     buildFeatures {
         compose = true
