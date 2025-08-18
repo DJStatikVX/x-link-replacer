@@ -45,6 +45,7 @@ class ReplaceLinkUseCase @Inject constructor() {
             return uri
                 .buildUpon()
                 .authority(X_TARGET_HOST)
+                .clearQuery()
                 .build()
                 .toString()
         } catch (_: Exception) {

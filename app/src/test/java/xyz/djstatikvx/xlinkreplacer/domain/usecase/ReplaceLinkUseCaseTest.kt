@@ -17,7 +17,8 @@ import xyz.djstatikvx.xlinkreplacer.util.Constants.LINK_MIME_TYPE
 @RunWith(RobolectricTestRunner::class)
 class ReplaceLinkUseCaseTest {
 
-    val mockXSourceLink = "https://x.com/Android/status/1897004092901446076"
+    val mockXSourceLink =
+        "https://x.com/Android/status/1897004092901446076?t=Bw-8_4-h24daA24f_96deA&s=19"
     val mockXTargetLink = "https://fixupx.com/Android/status/1897004092901446076"
 
     val mockYouTubeSourceLink = "https://www.youtube.com/watch?v=ni2pGkTPLDo"
