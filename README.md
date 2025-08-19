@@ -10,7 +10,7 @@
 
 1. You tap **Share** on a post from the X app.
 2. **X Link Replacer** appears as a sharing option.
-3. It detects X links and replaces the domain (`x.com` → `fixupx.com`).
+3. It detects X links and replaces the domain (`x.com` → `fixupx.com`), also cleaning the link from tracking params.
 4. It then launches the system share sheet with the modified link.
 
 ---
