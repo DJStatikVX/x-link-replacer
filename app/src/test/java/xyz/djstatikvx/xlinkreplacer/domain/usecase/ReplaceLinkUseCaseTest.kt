@@ -2,7 +2,6 @@ package xyz.djstatikvx.xlinkreplacer.domain.usecase
 
 import android.content.Intent
 import android.content.Intent.ACTION_SEND
-import android.os.Build
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.Assert.assertEquals
@@ -12,12 +11,10 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
-import org.robolectric.annotation.Config
 import xyz.djstatikvx.xlinkreplacer.util.Constants.IMAGE_MIME_TYPE
 import xyz.djstatikvx.xlinkreplacer.util.Constants.LINK_MIME_TYPE
 
 @RunWith(RobolectricTestRunner::class)
-@Config(sdk = [Build.VERSION_CODES.VANILLA_ICE_CREAM])
 class ReplaceLinkUseCaseTest {
 
     val mockXSourceLink =
