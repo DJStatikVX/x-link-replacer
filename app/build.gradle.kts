@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId = "xyz.djstatikvx.xlinkreplacer"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 36
         versionCode = 3
         versionName = "0.3.0"
