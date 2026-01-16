@@ -2,13 +2,12 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kapt)
+    alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
 }
 
-android {
+configure<ApplicationExtension> {
     namespace = "xyz.djstatikvx.xlinkreplacer"
     compileSdk = 36
 
@@ -36,16 +35,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlin {
-        compilerOptions {
-            jvmTarget = JvmTarget.fromTarget("11")
-        }
-    }
     buildFeatures {
         compose = true
-    }
-    kapt {
-        correctErrorTypes = true
     }
     testOptions {
         unitTests {
@@ -66,11 +57,11 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    kapt(libs.kotlin.metadata.jvm)
+    ksp(libs.kotlin.metadata.jvm)
 
     // Dagger Hilt
     implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
