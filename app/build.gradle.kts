@@ -10,10 +10,11 @@ plugins {
 configure<ApplicationExtension> {
     namespace = "xyz.djstatikvx.xlinkreplacer"
     compileSdk = 37
+    compileSdkMinor = 2
 
     defaultConfig {
         applicationId = "xyz.djstatikvx.xlinkreplacer"
-        minSdk = 23
+        minSdk = 24
         targetSdk = 37
         versionCode = 4
         versionName = "0.4.0"
